@@ -88,4 +88,24 @@ const SubmitButton = styled.button`
     }
 `
 
-export { Main, ZipcodeEntry, ZipcodeEntryContainer, ZipcodeEntryLabel, ZipcodeEntryWrapper, SubmitButton }
+const AqiTextContainer = styled(motion.div)`
+    position: relative;
+    top: -250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+const TextStyle = styled.h1`
+    font-famioly: inter;
+    font-weight: 400;
+    font-size: ${props => props.fontSize};
+    margin: 5px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+`
+
+export { Main, ZipcodeEntry, ZipcodeEntryContainer, ZipcodeEntryLabel, ZipcodeEntryWrapper, SubmitButton, AqiTextContainer, TextStyle}

@@ -25,7 +25,9 @@ export default function ZipcodeEntryBox(props) {
                 if (props.isSubmit) {
                     props.setIsSubmit(false)
                     props.setZipcode("")
-                } 
+                } else {
+                    
+                }
             }}
             onMouseLeave={() => {
                 if (zipcode === "") {
@@ -58,6 +60,11 @@ export default function ZipcodeEntryBox(props) {
                     } else {
                         props.setZipcode("")
                     }
+                }}
+                onKeyPress={event => {
+                  if (event.key === 'Enter')  {
+                    props.setIsSubmit(true)
+                  }
                 }}
             />
         </ZipcodeEntryWrapper>
